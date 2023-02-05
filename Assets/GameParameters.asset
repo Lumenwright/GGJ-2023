@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EarthRadius: 5
   SunRadiusOffset: 1
-  SunSpeed: 1
+  SunSpeed: 0.1
