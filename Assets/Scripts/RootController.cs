@@ -6,8 +6,13 @@ public class RootController : MonoBehaviour
 {
     [SerializeField] float distanceBeforeGrowing;
     [SerializeField] GameObject rootHolder;
-    [SerializeField] GameObject rootGrowthPoint;
+    [SerializeField] List<GameObject> roots;
+
     //[SerializeField] string invisibleRoot_Tag;
+    [SerializeField] float distanceToEarthSurface;
+
+    private GameObject activeRoot;
+    private GameObject rootGrowthPoint;
 
     const string state_young = "Young";
     const string state_old = "Old";
@@ -16,12 +21,39 @@ public class RootController : MonoBehaviour
     [SerializeField] GameObject invisibleRoot;
     private float x1, y1, x2, y2, distance, angle;  //math parameters
 
+    private int randomRoot;
+    private int randomFlip;
 
     // Start is called before the first frame update
     void Start()
     {
-        //invisibleRoot = GameObject.FindGameObjectWithTag(invisibleRoot_Tag);
+        InitializeRoot();
+    }
+
+    void InitializeRoot()
+    {
         rootState = state_young;
+
+        randomRoot = Random.Range(0, roots.Count);
+
+        randomFlip = Random.Range(0, 2);
+
+        for(int i = 0; i < roots.Count; i++)
+        {
+            gameObject.transform.GetChild(i).gameObject.SetActive(false);
+        }
+
+        activeRoot = gameObject.transform.GetChild(randomRoot).gameObject;
+
+        activeRoot.SetActive(true);
+
+        if(randomFlip == 0)
+        {
+            activeRoot.transform.Rotate(new Vector3(0, 180, 0));
+        }
+
+        rootGrowthPoint = activeRoot.transform.GetChild(0).gameObject;
+
         x1 = rootGrowthPoint.transform.position.x;
         y1 = rootGrowthPoint.transform.position.y;
     }

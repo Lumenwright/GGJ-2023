@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GameParameters
   m_EditorClassIdentifier: 
   EarthRadius: 5
-  SunRadiusOffset: 1
-  SunSpeed: 0.1
+  SunRadiusOffset: 3
+  SunSpeed: 0.05
   CloudNormalizedRadius: 0.75
   CloudBlockageOffset: 0.05
