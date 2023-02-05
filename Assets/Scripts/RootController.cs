@@ -5,19 +5,17 @@ using UnityEngine;
 public class RootController : MonoBehaviour
 {
     [SerializeField] float distanceBeforeGrowing;
-    [SerializeField] GameObject root;
+    [SerializeField] GameObject rootHolder;
+    [SerializeField] GameObject rootGrowthPoint;
+
     const string state_young = "Young";
     const string state_old = "Old";
-    [SerializeField] string rootState;
+    private string rootState;
 
-    [SerializeField] GameObject rootSpawnPoint;
     private GameObject invisibleRoot;
     private string invisibleRoot_Tag = "Player";
 
-    private float x1, y1, x2, y2;
-
-    //math parameters
-    [SerializeField] float distance, angle;
+    private float x1, y1, x2, y2, distance, angle;  //math parameters
 
 
     // Start is called before the first frame update
@@ -25,22 +23,22 @@ public class RootController : MonoBehaviour
     {
         invisibleRoot = GameObject.FindGameObjectWithTag(invisibleRoot_Tag);
         rootState = state_young;
-        x1 = rootSpawnPoint.transform.position.x;
-        y1 = rootSpawnPoint.transform.position.y;
+        x1 = rootGrowthPoint.transform.position.x;
+        y1 = rootGrowthPoint.transform.position.y;
     }
 
     // Update is called once per frame
     void Update()
     {
-        CheckForSpawn();
+        CheckDistanceForSpawning();
     }
 
-    void CheckForSpawn()
+    void CheckDistanceForSpawning()
     {
         x2 = invisibleRoot.transform.position.x;
         y2 = invisibleRoot.transform.position.y;
 
-        CalculateMathParameters();  //calculate distance between invisible root and active root; and angle
+        CalculateNewRootAngleRotation();  //calculate distance between invisible root and active root; and angle
 
         if (rootState.Equals(state_young) && distance > distanceBeforeGrowing)
         {
@@ -48,7 +46,7 @@ public class RootController : MonoBehaviour
         }
     }
 
-    void CalculateMathParameters()
+    void CalculateNewRootAngleRotation()
     {
         float tempAngle;
 
@@ -82,7 +80,7 @@ public class RootController : MonoBehaviour
     {
         rootState = state_old;
 
-        GameObject newRoot = Instantiate(root, new Vector3(x1, y1, 0), Quaternion.identity);
+        GameObject newRoot = Instantiate(rootHolder, new Vector3(x1, y1, 0), Quaternion.identity);
         newRoot.transform.Rotate(0, 0, angle);
     }
 }
