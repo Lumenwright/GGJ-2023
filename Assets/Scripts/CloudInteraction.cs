@@ -17,6 +17,7 @@ public class CloudInteraction : MonoBehaviour
     {
         float radius = _gameParams.EarthRadius + (_gameParams.SunRadiusOffset * _gameParams.CloudNormalizedRadius);
         transform.position = ProjectOnRadius(Vector3.right, radius);
+        transform.rotation = Quaternion.FromToRotation(Vector3.up, -transform.localPosition);
     }
 
     void OnMouseDown(){
@@ -29,6 +30,7 @@ public class CloudInteraction : MonoBehaviour
         var mouse = GetMousePosition() + _dragOffset;
         var cloud = ProjectOnRadius(mouse, radius);
         transform.position = cloud;
+        transform.rotation = Quaternion.FromToRotation(Vector3.up, -transform.localPosition);
         _runtimeVars.CloudPosition = transform.position;
     }
 
