@@ -15,3 +15,4 @@ MonoBehaviour:
   EarthRadius: 5
   SunRadiusOffset: 1
   SunSpeed: 0.1
+  CloudNormalizedRadius: 0.75
