@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &49871112 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4203740829839121145, guid: 78fa67afee1209f438369eae510db78d, type: 3}
+  m_PrefabInstance: {fileID: 4203740829810238449}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &659058923
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,11 +229,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 841416024860615829, guid: 9b19aa67706381642a376a52c698f754, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.87
       objectReference: {fileID: 0}
     - target: {fileID: 841416024860615829, guid: 9b19aa67706381642a376a52c698f754, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.87
       objectReference: {fileID: 0}
     - target: {fileID: 841416024860615829, guid: 9b19aa67706381642a376a52c698f754, type: 3}
       propertyPath: m_LocalPosition.z
@@ -323,5 +328,13 @@ PrefabInstance:
       propertyPath: root
       value: 
       objectReference: {fileID: 4203740830797448904, guid: 78fa67afee1209f438369eae510db78d, type: 3}
+    - target: {fileID: 4203740830797448907, guid: 78fa67afee1209f438369eae510db78d, type: 3}
+      propertyPath: rootHolder
+      value: 
+      objectReference: {fileID: 4203740830797448904, guid: 78fa67afee1209f438369eae510db78d, type: 3}
+    - target: {fileID: 4203740830797448907, guid: 78fa67afee1209f438369eae510db78d, type: 3}
+      propertyPath: rootGrowthPoint
+      value: 
+      objectReference: {fileID: 49871112}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78fa67afee1209f438369eae510db78d, type: 3}

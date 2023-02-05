@@ -7,14 +7,13 @@ public class RootController : MonoBehaviour
     [SerializeField] float distanceBeforeGrowing;
     [SerializeField] GameObject rootHolder;
     [SerializeField] GameObject rootGrowthPoint;
+    [SerializeField] string invisibleRoot_Tag;
 
     const string state_young = "Young";
     const string state_old = "Old";
     private string rootState;
 
     private GameObject invisibleRoot;
-    private string invisibleRoot_Tag = "Player";
-
     private float x1, y1, x2, y2, distance, angle;  //math parameters
 
 

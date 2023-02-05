@@ -130,11 +130,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceBeforeGrowing: 0
-  root: {fileID: 4203740830842382539}
-  rootState: 
-  rootSpawnPoint: {fileID: 4203740829839121145}
-  distance: 0
-  angle: 0
+  rootHolder: {fileID: 4203740830797448904}
+  rootGrowthPoint: {fileID: 4203740829839121145}
 --- !u!1 &4203740830842382539
 GameObject:
   m_ObjectHideFlags: 0
