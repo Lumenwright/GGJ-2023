@@ -16,6 +16,9 @@ public class RootController : MonoBehaviour
     [SerializeField]
     float distanceFromCenter;
 
+    [SerializeField]
+    GameObject mushroom;
+
     private GameObject activeRoot;
     private GameObject rootGrowthPoint;
 
@@ -83,6 +86,9 @@ public class RootController : MonoBehaviour
         {
             endGameCanvas.SetActive(true);
             //endGameCanvas.GetComponent<Canvas>().enabled = true;
+
+            GameObject endShroom = Instantiate(mushroom, new Vector3(x1, y1, 0), Quaternion.identity);
+            endShroom.transform.Rotate(new Vector3(0, 0, 90));
             enabled = false;
         }
 

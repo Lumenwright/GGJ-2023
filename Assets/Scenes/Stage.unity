@@ -436,6 +436,14 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4203740830797448906, guid: 78fa67afee1209f438369eae510db78d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4203740830797448906, guid: 78fa67afee1209f438369eae510db78d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4203740830797448906, guid: 78fa67afee1209f438369eae510db78d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -476,9 +484,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4203740830797448907, guid: 78fa67afee1209f438369eae510db78d, type: 3}
+      propertyPath: mushroom
+      value: 
+      objectReference: {fileID: 5572406750811061965, guid: d4061df3e1aa7104cb008620a23b09e4, type: 3}
+    - target: {fileID: 4203740830797448907, guid: 78fa67afee1209f438369eae510db78d, type: 3}
+      propertyPath: endGameCanvas
+      value: 
+      objectReference: {fileID: 782591908}
+    - target: {fileID: 4203740830797448907, guid: 78fa67afee1209f438369eae510db78d, type: 3}
       propertyPath: invisibleRoot
       value: 
       objectReference: {fileID: 1244919349}
+    - target: {fileID: 4203740830797448907, guid: 78fa67afee1209f438369eae510db78d, type: 3}
+      propertyPath: GameParameters
+      value: 
+      objectReference: {fileID: 11400000, guid: 044455fb82aa62a488e4062b1aea0bd5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78fa67afee1209f438369eae510db78d, type: 3}
 --- !u!1 &617704391
@@ -1341,6 +1361,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4510843989911097696, guid: 8cab0d47c21aa2b4ba075a64a1545591, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510843989911097696, guid: 8cab0d47c21aa2b4ba075a64a1545591, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4510843989911097696, guid: 8cab0d47c21aa2b4ba075a64a1545591, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
