@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &49871112 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4203740829839121145, guid: 78fa67afee1209f438369eae510db78d, type: 3}
-  m_PrefabInstance: {fileID: 4203740829810238449}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &659058923
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,17 +319,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4203740830797448907, guid: 78fa67afee1209f438369eae510db78d, type: 3}
-      propertyPath: root
-      value: 
-      objectReference: {fileID: 4203740830797448904, guid: 78fa67afee1209f438369eae510db78d, type: 3}
-    - target: {fileID: 4203740830797448907, guid: 78fa67afee1209f438369eae510db78d, type: 3}
-      propertyPath: rootHolder
-      value: 
-      objectReference: {fileID: 4203740830797448904, guid: 78fa67afee1209f438369eae510db78d, type: 3}
-    - target: {fileID: 4203740830797448907, guid: 78fa67afee1209f438369eae510db78d, type: 3}
-      propertyPath: rootGrowthPoint
-      value: 
-      objectReference: {fileID: 49871112}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78fa67afee1209f438369eae510db78d, type: 3}
