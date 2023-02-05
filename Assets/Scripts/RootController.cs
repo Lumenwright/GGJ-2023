@@ -16,6 +16,10 @@ public class RootController : MonoBehaviour
     private GameObject invisibleRoot;
     private float x1, y1, x2, y2, distance, angle;  //math parameters
 
+    private Vector3 sunCenter;
+    private Vector3 sunPosition;
+    private float radius = 3.0f;
+    private Vector3 direction;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +34,7 @@ public class RootController : MonoBehaviour
     void Update()
     {
         CheckDistanceForSpawning();
+        Sunfollow();
     }
 
     void CheckDistanceForSpawning()
@@ -81,5 +86,20 @@ public class RootController : MonoBehaviour
 
         GameObject newRoot = Instantiate(rootHolder, new Vector3(x1, y1, 0), Quaternion.identity);
         newRoot.transform.Rotate(0, 0, angle);
+    }
+    void Sunfollow()
+    {
+        Ray ray = GameObject.FindGameObjectWithTag("Sun").GetComponent<Camera>().ScreenPointToRay(_sunSprite.position);
+        RaycastHit hit;
+        Physics.Raycast(ray, out hit, 1000.0f);
+
+        sunPosition = new Vector3(hit.point.x, hit.point.y, 0);
+
+        direction = sunPosition - transform.position;
+        direction.z = 0;
+
+        sunCenter = direction.normalized * radius + transform.position;
+
+        transform.LookAt(sunCenter);
     }
 }
