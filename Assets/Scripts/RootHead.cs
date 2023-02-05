@@ -9,6 +9,8 @@ public class RootHead : MonoBehaviour
     private float radius = 3.0f;
     private Vector3 direction;
 
+    public float speed = 3.5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,5 +36,14 @@ public class RootHead : MonoBehaviour
         sunCenter = direction.normalized * radius + transform.position;
 
         transform.LookAt(sunCenter);
+    }
+    void FixedUpdate()
+    {
+        MoveForward();
+    }
+
+    void MoveForward()
+    {
+        transform.position += transform.forward * speed * Time.deltaTime;
     }
 }
