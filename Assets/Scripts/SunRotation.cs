@@ -7,6 +7,8 @@ public class SunRotation : MonoBehaviour
 {
     [SerializeField]
     GameParameters _gameParams;
+    [SerializeField]
+    RuntimeVariables _runtimeVars;
 
     [SerializeField]
     Transform _sunSprite;
@@ -23,5 +25,6 @@ public class SunRotation : MonoBehaviour
     {
         float speed = _gameParams.SunSpeed;
         transform.Rotate(0f, 0f, speed);
+        _runtimeVars.SunPosition = _sunSprite.transform.position;
     }
 }

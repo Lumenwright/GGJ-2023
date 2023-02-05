@@ -7,6 +7,9 @@ public class CloudInteraction : MonoBehaviour
     [SerializeField]
     GameParameters _gameParams;
 
+    [SerializeField]
+    RuntimeVariables _runtimeVars;
+
     private Vector3 _dragOffset;
 
     // Start s called before the first frame update
@@ -26,6 +29,7 @@ public class CloudInteraction : MonoBehaviour
         var mouse = GetMousePosition() + _dragOffset;
         var cloud = ProjectOnRadius(mouse, radius);
         transform.position = cloud;
+        _runtimeVars.CloudPosition = transform.position;
     }
 
     Vector3 GetMousePosition(){

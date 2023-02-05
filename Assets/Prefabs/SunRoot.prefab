@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameParams: {fileID: 11400000, guid: 044455fb82aa62a488e4062b1aea0bd5, type: 2}
+  _runtimeVars: {fileID: 11400000, guid: b0d808ee89e77404faaa3911938754e5, type: 2}
   _sunSprite: {fileID: 841416025465301985}
 --- !u!1 &841416025465301998
 GameObject:
