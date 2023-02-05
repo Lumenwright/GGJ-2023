@@ -10,6 +10,8 @@ public class RootHead : MonoBehaviour
     //private Vector3 direction;
     [SerializeField] float moveSpeed;
 
+    public float speed = 3.5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,5 +58,14 @@ public class RootHead : MonoBehaviour
             transform.position += moveSpeed * Time.deltaTime * directionSun.normalized;
         }
 
+    }
+    void FixedUpdate()
+    {
+        MoveForward();
+    }
+
+    void MoveForward()
+    {
+        transform.position += transform.forward * speed * Time.deltaTime;
     }
 }
