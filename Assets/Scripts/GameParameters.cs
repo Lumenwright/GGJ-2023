@@ -10,5 +10,5 @@ public class GameParameters : ScriptableObject
     // to keep Sun above Earth
     public float SunRadiusOffset;
     public float SunSpeed;
-
+    public float CloudNormalizedRadius;
 }
