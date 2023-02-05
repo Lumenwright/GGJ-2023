@@ -1319,6 +1319,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4510843990828262060, guid: 8cab0d47c21aa2b4ba075a64a1545591, type: 3}
+      propertyPath: m_Size.x
+      value: 40.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510843990828262060, guid: 8cab0d47c21aa2b4ba075a64a1545591, type: 3}
+      propertyPath: m_Size.y
+      value: 40.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510843990828262060, guid: 8cab0d47c21aa2b4ba075a64a1545591, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510843990828262061, guid: 8cab0d47c21aa2b4ba075a64a1545591, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 40.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510843990828262061, guid: 8cab0d47c21aa2b4ba075a64a1545591, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 40.96
+      objectReference: {fileID: 0}
     - target: {fileID: 4510843990955437130, guid: 8cab0d47c21aa2b4ba075a64a1545591, type: 3}
       propertyPath: m_Name
       value: SunAndCloud
