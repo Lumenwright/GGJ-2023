@@ -11,6 +11,11 @@ public class RootController : MonoBehaviour
     //[SerializeField] string invisibleRoot_Tag;
     [SerializeField] float distanceToEarthSurface;
 
+    [SerializeField] GameObject endGameCanvas;
+
+    [SerializeField]
+    float distanceFromCenter;
+
     private GameObject activeRoot;
     private GameObject rootGrowthPoint;
 
@@ -23,6 +28,8 @@ public class RootController : MonoBehaviour
 
     private int randomRoot;
     private int randomFlip;
+
+    public GameParameters GameParameters;
 
     // Start is called before the first frame update
     void Start()
@@ -62,7 +69,25 @@ public class RootController : MonoBehaviour
     void Update()
     {
         CheckDistanceForSpawning();
+        CheckEndGame();
     }
+
+    void CheckEndGame()
+    {
+        Vector3 startPoint = new Vector3(0, 0, 0);
+        float earthRadius = GameParameters.EarthRadius;
+        distanceFromCenter = Vector3.Distance(startPoint, rootGrowthPoint.transform.position);
+
+
+        if (distanceFromCenter > earthRadius)
+        {
+            endGameCanvas.SetActive(true);
+            //endGameCanvas.GetComponent<Canvas>().enabled = true;
+            enabled = false;
+        }
+
+    }
+
 
     void CheckDistanceForSpawning()
     {
